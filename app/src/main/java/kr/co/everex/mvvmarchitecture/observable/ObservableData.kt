@@ -23,9 +23,10 @@ class ObservableData : BaseObservable(){
      */
     @get:Bindable
     var site : String = ""
+
         set(value) {
-            field = value
-            notifyPropertyChanged(BR.site)
+        field = value
+        notifyPropertyChanged(BR.site)
         }
 
 

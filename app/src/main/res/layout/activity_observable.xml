@@ -5,7 +5,8 @@
     tools:context=".ObservableActivity">
 
     <data>
-        <!--    <data> 태그 안에 <variable>로 activity라는 이름의 변수를 설정해 주었다. type은 해당 경로를 나타낸다.-->
+        <!--    <data> 태그 안에 <variable>로 site 이름의 변수를 설정해 주었다. type은 해당 경로를 나타낸다.-->
+        <!--        ObservableData 를 가리키도록 설정-->
         <variable
             name="site"
             type="kr.co.everex.mvvmarchitecture.observable.ObservableData" />

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DataBindingTestActivity">
+
+    <data>
+<!--    <data> 태그 안에 <variable>로 activity라는 이름의 변수를 설정해 주었다. type은 해당 경로를 나타낸다.-->
+        <variable
+            name="activity"
+            type="kr.co.everex.mvvmarchitecture.DataBindingTestActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnSample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="버튼 클릭"
+            android:onClick="@{activity::btnClick}"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+<!--        기존에 존재했던 btnSample이라는 이름의 버튼에 다음과 같이 onClick 속성을 추가해준다.-->
+<!--        여기서 주의해야 할 점은 "@{변수 이름 :: 함수 이름}"이다. -->
+<!--        함수 이름 같은 경우는 실제 액티비티에 존재하는 함수 이름과 일치해야 하며, 반드시 :: 을 써야 한다.-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -33,14 +33,6 @@ object BindingConversions {
             .load(url)
             .error(R.drawable.star)
             .into(imageView)
-
-        // ImageView & Image data 를 묶는다 .
-//        Glide.with(App.getApplicationContext())
-//            .load(exerciseModel.exerciseImage)
-//            .error(R.mipmap.ic_launcher)
-//            .placeholder(R.mipmap.ic_launcher)
-//            .into(exerciseImageView)
-
     }
 
 }

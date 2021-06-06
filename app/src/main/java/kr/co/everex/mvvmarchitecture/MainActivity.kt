@@ -25,6 +25,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, RecyclerviewDataBindingActivity::class.java)
             startActivity(intent)
         }
+        // 리사이클러뷰 데이터 바인딩 테스트 화면으로 이동
+        binding.button3.setOnClickListener(){
+            val intent = Intent(this, ObservableActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

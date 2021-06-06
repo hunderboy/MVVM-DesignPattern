@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ObservableActivity">
+
+    <data>
+        <!--    <data> 태그 안에 <variable>로 activity라는 이름의 변수를 설정해 주었다. type은 해당 경로를 나타낸다.-->
+        <variable
+            name="site"
+            type="kr.co.everex.mvvmarchitecture.observable.ObservableData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/siteName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@{site.site}"
+            android:gravity="center"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="siteName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

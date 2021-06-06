@@ -16,6 +16,19 @@
         android:gravity="center_vertical">
 
 
+<!--        단순하게 src 속성에 @{user.profile}을 집어 넣어버리면 오류가 날 것이다. (profile은 String이기 때문에)-->
+<!--        이럴 경우 BindingAdapter를 이용해주면 된다.-->
+<!--        BindingAdapter는 사용자가 BindingAtrribute를 정의하고, 그 내부 로직을 작성할 수 있게 만들어 준다.-->
+<!--        쉽게 표현하면 본인이 만든 함수 등을 View에 적용시킬 수 있게 해주는 것이다.-->
+<!--        이 전에서 실습으로 보여준 "android:onClick"과는 다른 느낌인데, 이전에 했던 클릭 이벤트 같은 경우는 단순히 함수를 바인딩시켜준 것 뿐이고,-->
+<!--        지금하는 BindingAdapter는 새로운 기능 정의 및 로직을 작성하는 것이다.-->
+        <ImageView
+            android:id="@+id/item_profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:imageUrl="@{user.profile}"
+            />
+
         <TextView
             android:id="@+id/item_name"
             android:layout_width="match_parent"

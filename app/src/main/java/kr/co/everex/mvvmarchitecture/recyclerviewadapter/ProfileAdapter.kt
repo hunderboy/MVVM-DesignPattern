@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kr.co.everex.mvvmarchitecture.databinding.RcvListItemBinding
 import kr.co.everex.mvvmarchitecture.dataclass.ProfileData
+import kr.co.everex.mvvmarchitecture.viewholder.ProfileVH
 
 
-
-class ProfileAdapter (private val context : Context) : RecyclerView.Adapter<ProfileAdapter.ProfileVH>() {
+class ProfileAdapter (private val context : Context) : RecyclerView.Adapter<ProfileVH>() {
 
     var data = listOf<ProfileData>()
 
@@ -30,11 +30,4 @@ class ProfileAdapter (private val context : Context) : RecyclerView.Adapter<Prof
         holder.onBind(data[position])
     }
 
-    class ProfileVH(val binding: RcvListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun onBind(data: ProfileData) {
-            binding.user = data
-        }
-
-
-    }
 }

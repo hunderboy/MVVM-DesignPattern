@@ -34,9 +34,10 @@ class RecyclerviewDataBindingActivity : AppCompatActivity() {
         binding.mainRcv.layoutManager = LinearLayoutManager(this)
         binding.mainRcv.adapter = profileAdapter
         profileAdapter.data = listOf(
-            ProfileData(name = "Kang", age = 26),
-            ProfileData(name = "Kim", age = 25)
+            ProfileData(profile = "https://i.ibb.co/CKsdXHh/Union-mint.png", name = "Kang", age = 26),
+            ProfileData(profile = "https://i.ibb.co/fQ1VVpN/IMG-0207.png", name = "Kim", age = 25)
         )
         profileAdapter.notifyDataSetChanged()
     }
+
 }
